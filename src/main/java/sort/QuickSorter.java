@@ -1,5 +1,8 @@
 package sort;
 
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 public class QuickSorter extends Sorter {
 
     @Override
@@ -14,9 +17,9 @@ public class QuickSorter extends Sorter {
 
         int pivotIndex = partition(input, start, end);
         quickSort(input, start, pivotIndex);
-        for (int i = 0; i < input.length; i++) {
-            System.out.println(input[i]);
-        }
+//        for (int i = 0; i < input.length; i++) {
+//            log.info(input[i]);
+//        }
         quickSort(input, pivotIndex + 1, end);
 
         return input;
